@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,19 +8,25 @@ import { Component } from '@angular/core';
 })
 export class SidenavComponent {
   topics = [
-    'Forms & Data-Binding',
-    'Decorators',
-    'Directives',
-    'Pipes',
-    'Hooks',
-    'Rxjs',
-    'Ngrx',
-    'Logging',
-    'HTTP',
-    'Signals',
-    'Error Handling',
-    'i18n',
-    'Service Worker',
-    'Caching'
+    {path:'forms',name:'Forms & Data-Binding'},
+    {path:'decorators',name:'Decorators'},
+    {path:'directives',name:'Directives'},
+    {path:'pipes',name:'Pipes'},
+    {path:'hooks',name:'Hooks'},
+    {path:'rxjs',name:'Rxjs'},
+    {path:'ngrx',name:'Ngrx'},
+    {path:'logging',name:'Logging'},
+    {path:'http',name:'HTTP'},
+    {path:'signals',name:'Signals'},
+    {path:'error-handling',name:'Error Handling'},
+    {path:'i18n',name:'i18n'},
+    {path:'pwa',name:'Service Worker'},
+    {path:'caching',name:'Caching'},
   ];
+
+  @Input() toggle:MatDrawer | undefined;
+
+  toggleMenu(){
+    this.toggle?.toggle();
+  }
 }

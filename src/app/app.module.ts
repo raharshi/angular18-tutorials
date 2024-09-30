@@ -19,6 +19,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import { FormsComponent } from './forms/forms.component';
+import { DecoratorsComponent } from './decorators/decorators.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { RxjsExamplesComponent } from './rxjs-examples/rxjs-examples.component';
+import { NgrxExamplesComponent } from './ngrx-examples/ngrx-examples.component';
+import { LoggingComponent } from './logging/logging.component';
+import { HttpExamplesComponent } from './http-examples/http-examples.component';
+import { SignalsComponent } from './signals/signals.component';
+import { ErrorHandlingComponent } from './error-handling/error-handling.component';
+import { I18nComponent } from './i18n/i18n.component';
+import { PwaExamplesComponent } from './pwa-examples/pwa-examples.component';
+import { CachingExamplesComponent } from './caching-examples/caching-examples.component';
 
 
 @NgModule({
@@ -27,6 +41,20 @@ import {MatListModule} from '@angular/material/list';
     SidenavComponent,
     HomeComponent,
     NavbarComponent,
+    FormsComponent,
+    DecoratorsComponent,
+    DirectivesComponent,
+    PipesComponent,
+    HooksComponent,
+    RxjsExamplesComponent,
+    NgrxExamplesComponent,
+    LoggingComponent,
+    HttpExamplesComponent,
+    SignalsComponent,
+    ErrorHandlingComponent,
+    I18nComponent,
+    PwaExamplesComponent,
+    CachingExamplesComponent,
   ],
   imports: [
     BrowserModule,
