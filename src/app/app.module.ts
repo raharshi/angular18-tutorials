@@ -9,17 +9,12 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
-import { FormsComponent } from './forms/forms.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
@@ -33,6 +28,7 @@ import { ErrorHandlingComponent } from './error-handling/error-handling.componen
 import { I18nComponent } from './i18n/i18n.component';
 import { PwaExamplesComponent } from './pwa-examples/pwa-examples.component';
 import { CachingExamplesComponent } from './caching-examples/caching-examples.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -41,7 +37,6 @@ import { CachingExamplesComponent } from './caching-examples/caching-examples.co
     SidenavComponent,
     HomeComponent,
     NavbarComponent,
-    FormsComponent,
     DecoratorsComponent,
     DirectivesComponent,
     PipesComponent,
@@ -59,15 +54,12 @@ import { CachingExamplesComponent } from './caching-examples/caching-examples.co
   imports: [
     BrowserModule,
     MatSidenavModule,
-    MatCheckboxModule,
-    FormsModule,
     MatButtonModule,
     AppRoutingModule,
-    MatFormFieldModule,
-    MatSelectModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration(),

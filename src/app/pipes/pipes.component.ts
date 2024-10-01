@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PipesComponent {
 
+  constructor(){
+    console.log(PipesComponent.name+" is loaded..")
+  }
+  
 }

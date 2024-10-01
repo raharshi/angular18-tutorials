@@ -8,7 +8,7 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
-$textcolor: #005ccb;
+
 // Define the theme object.
 $angular18-tutorials-theme: mat.define-theme((
   color: (
@@ -36,5 +36,9 @@ $angular18-tutorials-theme: mat.define-theme((
 // @include mat.color-variants-backwards-compatibility($angular18-tutorials-theme);
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color:$textcolor}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/* Importing Bootstrap SCSS file. */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";

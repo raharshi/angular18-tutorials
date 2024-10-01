@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HooksComponent {
 
+  constructor(){
+    console.log(HooksComponent.name+" is loaded..")
+  }
+  
 }

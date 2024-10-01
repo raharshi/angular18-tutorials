@@ -19,7 +19,6 @@ import { DecoratorsComponent } from './decorators/decorators.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'forms',component:FormsComponent},
   {path:'decorators',component:DecoratorsComponent},
   {path:'directives',component:DirectivesComponent},
   {path:'pipes',component:PipesComponent},
@@ -33,6 +32,7 @@ const routes: Routes = [
   {path:'i18n',component:I18nComponent},
   {path:'pwa',component:PwaExamplesComponent},
   {path:'caching',component:CachingExamplesComponent},
+  { path: 'forms', loadChildren: () => import('./forms/forms.module').then(m => m.FormExampleModule) },
   {path:'**',redirectTo:'home'}
 
 ];

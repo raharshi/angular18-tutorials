@@ -1,5 +1,5 @@
 <mat-list>
     <mat-list-item *ngFor="let topic of topics" >
-        <button mat-button [routerLink]="topic.path" (click)="toggleMenu()">{{topic.name}}</button>
+        <button mat-button [routerLink]="topic.path" routerLinkActive="active" (click)="toggleMenu()">{{topic.name}}</button>
     </mat-list-item>
 </mat-list>

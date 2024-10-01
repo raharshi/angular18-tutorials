@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class DirectivesComponent {
 
+  constructor(){
+    console.log(DirectivesComponent.name+" is loaded..")
+  }
+  
 }

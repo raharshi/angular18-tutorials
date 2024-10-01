@@ -1,0 +1,92 @@
+<div class="row">
+	<div class="col-4">
+		<button mat-button *ngFor="let topic of topics" (click)  = "selectedTopic = topic">{{topic}}</button>
+	</div>
+
+	<div class="col-8" [ngSwitch]="selectedTopic">
+		<ng-template [ngSwitchCase]= "'One-way binding'"> 
+			<h4 ngbScrollSpyFragment="nested-1">One-way Binding</h4>
+			<p>
+				Manipulate web elements either from web page or from component.
+			</p>
+		</ng-template>
+
+		<ng-template [ngSwitchCase]= " 'Interpolation'">
+            <h4 ngbScrollSpyFragment="nested-1-1">Interpolation</h4>
+			<p>
+				Manipulate web page elements from component. Denoted by "double curly brace" <br>
+
+                Here is an example of interpolation -- <strong> {{intString}} </strong> <br>
+                101 + 203 = <strong>{{101+203}}</strong>
+			</p>
+		</ng-template>  
+
+		<ng-template [ngSwitchCase]= " 'Property binding'">
+			<h5 ngbScrollSpyFragment="nested-1-2">Property binding</h5>
+			<p>
+				Manipulate web page elements from component. Denoted by "[]"
+
+                <strong>Native element</strong>
+                button [disable] <br>
+                <button mat-raised-button [disabled] = true> native button</button> <br>
+                <strong>component and directives</strong> <br>
+                [value] <br>
+
+                [src] or [ngSrc] <br>
+                <img [src] = "imageUrl" alt="angular photo" height="100px" width="100px">
+                <strong> and can be used for directives like input, ngStyle, ngClass etc.,</strong>
+                <strong></strong>
+			</p>
+		</ng-template>
+
+		<ng-template [ngSwitchCase]= " 'Event binding'">
+			<h5 ngbScrollSpyFragment="nested-1-3">Event binding</h5>
+			<p>
+				Manipulate web page elements from web page in the form of mouse click or keyboard events. Denoted by "()"
+                ex: (onClick) (keyup) (keyup.enter) (keyup.shift.enter) (keyup.code.alt.leftshift) <br>
+                
+                <input type="text" (keyup)="keyPressed($event)">  &nbsp;&nbsp;
+                
+                <button mat-raised-button (click)="clickMsg()"> send Message</button> <br>
+                Message from event <strong>{{keyPressMsg}} </strong>
+			</p>
+		</ng-template>
+
+		<ng-template [ngSwitchCase]= " 'Two-way binding'">
+			<h4 ngbScrollSpyFragment="nested-2">Two-way binding</h4>
+			<p>
+				Manipulate web page elements from component to web page and vice-versa. In other words, It's a combination
+                of property binding and event binding. Denoted by "[()]"
+                ex: [(ngModel)] <br>
+			</p>
+		</ng-template>
+
+		<ng-template [ngSwitchCase]= " 'NgModel'">
+			<h5 >binding using formcontrols  - NgModel</h5>
+			<p>
+                [(ngModel)] is a directive for manipulating data from component and allow to propagate the changes back to component.
+                    Name:  <input matInput type="text" [(ngModel)] = "name">
+                <br>
+				@if(name){
+					<span>Hello {{name}}. Welcome!!</span>
+
+				}
+			</p>
+		</ng-template>
+
+		<ng-template [ngSwitchCase]= " 'Custom -input, output directives'">
+			<h5>binding using components  -  input, output directives</h5>
+			
+				<p>Counter: {{ initialCount }} <br>
+				<app-counter [(count)]="initialCount"></app-counter> <br>
+				If we break down the example above to its core , each two-way binding for components requires the following: <br>
+
+				The child component must contain: <br>
+				
+				An Input() property <br>
+				A corresponding Output() event emitter that has the exact same name as the input property plus "Change" at the end. The emitter must also emit the same type as the input property. <br>
+				A method that emits to the event emitter with the updated value of the Input().
+			</p>
+		</ng-template> 
+	</div> 
+</div>

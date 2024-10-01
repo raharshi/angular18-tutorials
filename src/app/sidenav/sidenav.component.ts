@@ -7,6 +7,11 @@ import { MatDrawer } from '@angular/material/sidenav';
   styleUrl: './sidenav.component.scss',
 })
 export class SidenavComponent {
+  
+  constructor(){
+    console.log(SidenavComponent.name+" is loaded..")
+  }
+  
   topics = [
     {path:'forms',name:'Forms & Data-Binding'},
     {path:'decorators',name:'Decorators'},
