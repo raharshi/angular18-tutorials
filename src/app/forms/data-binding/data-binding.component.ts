@@ -5,6 +5,7 @@ import { FormControl, Validators } from '@angular/forms';
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.scss',
+  // preserveWhitespaces:true
 })
 export class DataBindingComponent {
 

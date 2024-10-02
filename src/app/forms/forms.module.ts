@@ -11,6 +11,11 @@ import { MatButton } from '@angular/material/button';
 import {MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -31,8 +36,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    
+    MatSelectModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatRadioModule
 
+  ],
+  providers:[
+    provideNativeDateAdapter()
   ]
 })
 export class FormExampleModule { 
