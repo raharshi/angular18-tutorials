@@ -1,13 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CustomHighlightDirective, CustomLowerCasePipe, DecorService, DecoratorsComponent } from './decorators.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes:Routes=[
+  {path:'',component:DecoratorsComponent}
+]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CustomLowerCasePipe,
+    DecoratorsComponent,
+    CustomHighlightDirective
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forChild(routes)
+  ],
+  providers:[
+    DecorService,
+    CustomLowerCasePipe
+  ],
+  exports:[RouterModule]
 })
 export class DecoratorsModule { 
   

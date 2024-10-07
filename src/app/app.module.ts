@@ -15,7 +15,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
-import { DecoratorsComponent } from './decorators/decorators.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { HooksComponent } from './hooks/hooks.component';
@@ -37,7 +36,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidenavComponent,
     HomeComponent,
     NavbarComponent,
-    DecoratorsComponent,
     DirectivesComponent,
     PipesComponent,
     HooksComponent,

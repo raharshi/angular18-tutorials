@@ -19,7 +19,7 @@ import { DecoratorsComponent } from './decorators/decorators.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'decorators',component:DecoratorsComponent},
+  {path:'decorators',loadChildren:()=> import("./decorators/decorators.module").then(m=>m.DecoratorsModule)},
   {path:'directives',component:DirectivesComponent},
   {path:'pipes',component:PipesComponent},
   {path:'hooks',component:HooksComponent},
